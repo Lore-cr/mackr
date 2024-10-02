@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WandaVision</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-image: url("https://w0.peakpx.com/wallpaper/465/966/HD-wallpaper-wandavision-poster.jpg");
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+        width: 100vw;
+      }
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #e61b1bdf;
+        padding: 10px 20px;
+      }
+      nav a {
+        color: rgb(31, 27, 27);
+        text-decoration: none;
+        padding: 10px 20px;
+        border: 1px solid transparent;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+      }
+      nav a:hover {
+        background-color: #914b4b;
+      }
+      .socials a {
+        color: rgb(57, 39, 39);
+        margin-left: 15px;
+        font-size: 1.5em;
+      }
+      .socials a:hover {
+        color: rgb(144, 122, 56);
+        transform: scale(1.2);
+      }
+      .carousel {
+        display: flex;
+        overflow: hidden;
+        width: 100%;
+        margin-top: 20px;
+      }
+      .carousel-inner {
+        display: flex;
+        animation: scroll 20s linear infinite;
+      }
+      .carousel img {
+        width: 300px;
+        margin: 0;
+      }
+      @keyframes scroll {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-60%);
+        }
+      }
+      .section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        padding: 20px;
+        background-size: cover;
+        background-position: center;
+        height: auto;
+        margin: 20px 0;
+        color: rgb(201, 181, 181);
+        border: 2px solid rgba(113, 71, 71, 0.5);
+        border-radius: 10px;
+      }
+      .content {
+        background: rgba(0, 0, 0, 0.7);
+        padding: 20px;
+        border-radius: 10px;
+        width: 80%;
+        max-width: 600px;
+        position: relative;
+        z-index: 1;
+        text-align: center;
+        box-shadow: inset 0 4px 20px rgb(222, 230, 10);
+      }
+      .video-container {
+        width: 300px;
+        height: 200px;
+        margin-left: 20px;
+        position: relative;
+      }
+
+      .video-container img {
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+        cursor: pointer;
+      }
+      .video-play-icon {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 3em;
+        color: rgb(246, 243, 243);
+        opacity: 0.7;
+      }
+      .video-play-icon:hover {
+        opacity: 1;
+      }
+      .footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+        padding: 20px;
+        background-color: #333;
+        color: white;
+        flex-direction: column;
+      }
+      .footer .socials {
+        margin-bottom: 10px;
+      }
+      .footer a {
+        color: white;
+        margin: 0 10px;
+        font-size: 1.5em;
+      }
+      .menu-button {
+        margin-top: 10px;
+        padding: 10px 20px;
+        background-color: #555;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+      .menu-button:hover {
+        background-color: #777;
+      }
+      .copyright {
+        font-size: 0.8em;
+        margin-top: 10px;
+      }
+      .calculadora {
+        width: 40%;
+        text-align: center;
+        padding: 20px;
+        border-radius: 100px;
+        margin: auto;
+      }
+      h1 {
+        text-align: center;
+        margin: 20px 0;
+        font-size: 4em;
+        letter-spacing: 3px;
+        color: #fff;
+        background: linear-gradient(45deg, #ff2400, #ffd700);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-stroke: 2px black;
+        text-shadow: 0 0 5px rgba(255, 36, 0, 0.7),
+          2px 2px 10px rgba(0, 0, 0, 0.8), 4px 4px 15px rgba(255, 69, 0, 0.9),
+          6px 6px 20px rgb(0, 0, 0), -1px -1px 0px black, 1px 1px 0px black,
+          -1px 1px 0px black, 1px -1px 0px black;
+        animation: magicGlow 3s ease-in-out infinite alternate,
+          magicSparkles 5s linear infinite;
+      }
+
+      @keyframes magicGlow {
+        0% {
+          text-shadow: 0 0 5px rgba(255, 36, 0, 0.7),
+            2px 2px 10px rgba(0, 0, 0, 0.8), 4px 4px 15px rgba(161, 0, 0, 0.9),
+            6px 6px 20px rgb(0, 0, 0), -1px -1px 0px rgb(0, 0, 0),
+            1px 1px 0px black, -1px 1px 0px black, 1px -1px 0px black;
+        }
+      }
+      @keyframes magicSparkles {
+        0% {
+          opacity: 0.9;
+          transform: translateY(0) scale(1);
+        }
+        50% {
+          opacity: 0.7;
+          transform: translateY(-5px) scale(1.05);
+        }
+        100% {
+          opacity: 0.9;
+          transform: translateY(0) scale(1);
+        }
+      }
+      section {
+        background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVyMPbLqcnAtf_iJtqETd0b6IOKZyr2nwX3jQtbW7-53eVdDJjk9X-JkNHI2utCxqOmHM&usqp=CAU");
+        margin: 10px 0;
+        text-align: center;
+        font-family: arial black;
+      }
+      .adentro {
+        background-color: black;
+        width: 75%;
+        text-align: center;
+        border: 10px solid #3d023d;
+        padding: 20px;
+        border-radius: 100px;
+        margin: auto;
+        display: flex;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="#seccion1">Despedidas</a>
+        <a href="#seccion2">Criticas</a>
+        <a href="#seccion3">Calculadora WandaVision</a>
+        <a href="#seccion4">Capitulos de wandavision</a>
+      </nav>
+      <div class="socials">
+        <a
+          href="https://www.facebook.com/groups/880135149184653/?ref=share&mibextid=KtfwRi"
+          target="_blank"
+          class="fab fa-facebook"
+        ></a>
+        <a
+          href="https://www.instagram.com/marvel?igsh=eDdmNGp3MTh5dzBn"
+          target="_blank"
+          class="fab fa-instagram"
+        ></a>
+        <a
+          href="https://www.tiktok.com/@marvel?_t=8qBfNeDNE61&_r=1"
+          target="_blank"
+          class="fab fa-tiktok"
+        ></a>
+      </div>
+    </header>
+
+    <div class="carousel">
+      <div class="carousel-inner">
+        <img
+          src="https://st1.uvnimg.com/05/74/937f7ce5dec59a7660460150c5a9/wandavision-w.jpeg"
+          alt="Imagen 1"
+        />
+        <img
+          src="https://files.merca20.com/uploads/2021/02/Captura-de-Pantalla-2021-02-17-a-las-14.33.03.jpg"
+          alt="Imagen 2"
+        />
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5aDA_7_0OTArbT9LvMo0dx5qdJw6moH7TpQ&s"
+          alt="Imagen 3"
+        />
+        <img
+          src="https://st1.uvnimg.com/a9/5d/7ec73dc17893944ee9becec65416/wanda-vision.jpeg"
+          alt="Imagen 4"
+        />
+      </div>
+    </div>
+
+    <h1 style="text-align: center; margin: 20px 0">WandaVision</h1>
+
+    <div
+      id="seccion1"
+      class="section"
+      style="
+        background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVyMPbLqcnAtf_iJtqETd0b6IOKZyr2nwX3jQtbW7-53eVdDJjk9X-JkNHI2utCxqOmHM&usqp=CAU');
+      "
+    >
+      <div
+        class="content"
+        style="
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        "
+      >
+        <div class="video-container">
+          <iframe
+            src="https://www.youtube.com/embed/6kOXglBViQM?si=EnrOHBoJ5oUUGCsR"
+            frameborder="0"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <div style="width: 60%">
+          <h2 style="text-align: center">Despedida</h2>
+          <p>Eres mi tristeza y mi esperanza. Pero sobre todo, eres mi amor.</p>
+          <button class="menu-button" onclick="scrollToMenu()">Menú</button>
+        </div>
+      </div>
+    </div>
+
+    <div
+      id="seccion2"
+      class="section"
+      style="
+        background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVyMPbLqcnAtf_iJtqETd0b6IOKZyr2nwX3jQtbW7-53eVdDJjk9X-JkNHI2utCxqOmHM&usqp=CAU');
+      "
+    >
+      <div
+        class="content"
+        style="
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        "
+      >
+        <div class="video-container">
+          <iframe src="https://en.wikipedia.org/wiki/WandaVision"></iframe>
+        </div>
+        <div style="width: 60%">
+          <h2 style="text-align: center">Criticas</h2>
+          <p>
+            'Bruja Escarlata y Visión': un simpático experimento narrativo cuyo
+            gran valor son las posibilidades que abre para Marvel y Disney+.
+          </p>
+          <button class="menu-button" onclick="scrollToMenu()">Menú</button>
+        </div>
+      </div>
+    </div>
+    <section
+      id="seccion3"
+      class="section"
+      style="
+        background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVyMPbLqcnAtf_iJtqETd0b6IOKZyr2nwX3jQtbW7-53eVdDJjk9X-JkNHI2utCxqOmHM&usqp=CAU');
+      "
+    >
+      <div
+        class="content"
+        style="
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          height: 800px;
+        "
+      >
+        <div
+          class="calculadora"
+          style="
+            margin-right: 30px;
+            padding: 10px;
+            border-radius: 15px;
+            background-color: rgba(0, 0, 0, 0.6);
+          "
+        >
+          <iframe
+            src="https://lore-cr.github.io/Mach/calculadora99.html"
+            width="350"
+            height="800"
+            frameborder="0"
+            style="border-radius: 10px; overflow: hidden"
+            scrolling="no"
+          ></iframe>
+        </div>
+        <div style="width: 100%; text-align: center; padding-left: 80px">
+          <h2 style="text-align: center">Calculadora WandaVision</h2>
+          <p>
+            No sé por qué estaba tan preocupado. Después de todo, no fue tan
+            difícil encajar.
+          </p>
+          <a
+            href="https://drive.google.com/file/d/1gRvRnywXb5xFFRyaOrXN6o1trfmHVYx0/view?usp=sharing"
+            download="Pon el nombre"
+            >Descarga calculadora</a
+          >
+          <button class="menu-button" onclick="scrollToMenu()">Menú</button>
+        </div>
+      </div>
+    </section>
+    <section
+      id="seccion4"
+      class="section"
+      style="
+        background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVyMPbLqcnAtf_iJtqETd0b6IOKZyr2nwX3jQtbW7-53eVdDJjk9X-JkNHI2utCxqOmHM&usqp=CAU');
+      "
+    >
+      <div
+        class="content"
+        style="
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          height: 500px;
+        "
+      >
+        <div
+          class="calculadora"
+          style="
+            margin-right: 30px;
+            padding: 10px;
+            border-radius: 15px;
+            background-color: rgba(0, 0, 0, 0.6);
+          "
+        >
+          <iframe
+            src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTpYhuTO9wwzo0YCy5tgmEmX5VK1LFg2MVbgcEGYT5Aeuux2Vp8NVVBdhwGlYlFZL0eBqjDY7a3bNN4/pubhtml?gid=0&single=true"
+            width="340"
+            height="450"
+            frameborder="0"
+            style="border-radius: 10px; overflow: hidden"
+            scrolling="no"
+          ></iframe>
+        </div>
+        <div style="width: 100%; text-align: center; padding-left: 80px">
+          <h2 style="text-align: center">Capitulos de wandavision</h2>
+          <p>
+            No sé por qué estaba tan preocupado. Después de todo, no fue tan
+            difícil encajar.
+          </p>
+          <a
+            href="https://docs.google.com/spreadsheets/d/e/2PACX-1vTpYhuTO9wwzo0YCy5tgmEmX5VK1LFg2MVbgcEGYT5Aeuux2Vp8NVVBdhwGlYlFZL0eBqjDY7a3bNN4/pubhtml?gid=0&single=true"
+            download="Pon el nombre"
+            >Descarga documento
+          </a>
+          <button class="menu-button" onclick="scrollToMenu()">Menú</button>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="socials">
+        <a
+          href="https://www.instagram.com/marvelcomics?igsh=MXJ3YmEyaWQ3MnZrZw=="
+          target="_blank"
+          class="fab fa-instagram"
+        ></a>
+        <a
+          href="https://www.tiktok.com/@connor_maximoff?_t=8qBiTvIcSZC&_r=1"
+          target="_blank"
+          class="fab fa-tiktok"
+        ></a>
+        <a
+          href="https://whatsapp.com/channel/0029VaAUnQFLNSaBmEy7Jk3H"
+          target="_blank"
+          class="fab fa-whatsapp"
+        ></a>
+        <a
+          href="https://youtube.com/@marvel?si=oAKB74AU_VQ41XzN"
+          target="_blank"
+          class="fab fa-youtube"
+        ></a>
+        <a
+          href="https://www.twitch.tv/marvel"
+          target="_blank"
+          class="fab fa-twitch"
+        ></a>
+      </div>
+      <div class="copyright">
+        &copy; 2024 Derechos Reservados Lorena Orellana Rodas .
+      </div>
+    </footer>
+
+    <script>
+      function scrollToMenu() {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      }
+    </script>
+  </body>
+</html>
